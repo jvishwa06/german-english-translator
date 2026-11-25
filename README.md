@@ -36,4 +36,9 @@ pip install -r requirements.txt          # includes the spaCy English and German
 uvicorn main:app --port 8000
 ```
 
-The `Dockerfile` copies `mainonnx.py` and starts `mainonnx:app`, but the API file in this repo is named `main.py`. Update the Dockerfile to use `main.py` and `main:app` before building the image.
+Or with Docker:
+
+```bash
+docker build -t german-english-translator .
+docker run -p 8000:8000 german-english-translator
+```
